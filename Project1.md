@@ -15,7 +15,7 @@ ggplot(lakes) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-lakes-1.png)<!-- -->
+![](Projects/Project1_figs/lakes-1.png)<!-- -->
 
 #### b) Create a new factor variable called `Species_size` from the `Species` column that divides the `Species` variable into three groups of equal range with levels `small`, `medium` and `large`. (Hint: use the `cut()` function.) Display the first 10 values of `Species_size`.
 
@@ -38,7 +38,7 @@ ggplot(lakes) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-unnamed-chunk-3-1.png)<!-- -->
+![](Projects/Project1_figs/unnamed-chunk-3-1.png)<!-- -->
 
 #### d) Plot multiple boxplots, grouped by `Species_size` for the same variable. The boxplots should be ordered by decreasing median from left to right.
 
@@ -50,7 +50,7 @@ ggplot(lakes) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-unnamed-chunk-4-1.png)<!-- -->
+![](Projects/Project1_figs/README-unnamed-chunk-4-1.png)<!-- -->
 
 #### e) Plot overlapping density curves of the same variable, one curve per factor level of `Species_size`, on a single set of axes. Each curve should be a different color.
 
@@ -61,7 +61,7 @@ ggplot(lakes) +
     theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-unnamed-chunk-5-1.png)<!-- -->
+![](Projects/Project1_figs/unnamed-chunk-5-1.png)<!-- -->
 
 #### f) Summarize the results of c), d) and e): what unique information, *specific to this variable*, is provided by each of the three graphical forms? In other words, describe one by one what you learn from the histograms, boxplots, and density curves that the others don’t show as well or at all.
 
@@ -113,7 +113,7 @@ ggplot(Challeng) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-unnamed-chunk-6-1.png)<!-- -->
+![](Projects/Project1_figs/unnamed-chunk-6-1.png)<!-- -->
 
 ``` r
 ggplot(Challeng) + 
@@ -124,7 +124,7 @@ ggplot(Challeng) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-unnamed-chunk-6-2.png)<!-- -->
+![](Projects/Project1_figs/unnamed-chunk-6-2.png)<!-- -->
 
 These two plots seem to come from different distributions just because
 of the closeness of different boundaries. When the left side is closed,
@@ -152,7 +152,7 @@ ggplot(Challeng) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-unnamed-chunk-7-1.png)<!-- -->
+![](Projects/Project1_figs/unnamed-chunk-7-1.png)<!-- -->
 
 ``` r
 ggplot(Challeng) + 
@@ -163,7 +163,7 @@ ggplot(Challeng) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-unnamed-chunk-7-2.png)<!-- -->
+![](Projects/Project1_figs/unnamed-chunk-7-2.png)<!-- -->
 
 ### 3\. drugcost
 
@@ -192,7 +192,7 @@ ggplot(pivot_data) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-drugcost-1.png)<!-- -->
+![](Projects/Project1_figs/drugcost-1.png)<!-- -->
 
 Most of these variables seem normally distributed, including `AGE`,
 `COPAY`, `COST`, `F`, `GS` and `RXPM`, excluding `RI`. `MM` looks like
@@ -211,7 +211,7 @@ ggplot(drugcost) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-unnamed-chunk-8-1.png)<!-- -->
+![](Projects/Project1_figs/unnamed-chunk-8-1.png)<!-- -->
 
 It’s hard to tell whether `F` seems to come from a normal distribution.
 The shape of the density of variable `F` seems to resemble a bell curve.
@@ -241,7 +241,7 @@ qqnorm(F_data,pch = 1)
 qqline(F_data,col = "steelblue", lwd = 2)
 ```
 
-![](Project1_figs/README-unnamed-chunk-10-1.png)<!-- -->
+![](Projects/Project1_figs/unnamed-chunk-10-1.png)<!-- -->
 
 Since most of these data points stick around the QQ-line, it appears
 that the variable `F` is normally distributed.
@@ -258,7 +258,7 @@ ggplot(samples) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-![](Project1_figs/README-unnamed-chunk-11-1.png)<!-- -->
+![](Projects/Project1_figs/unnamed-chunk-11-1.png)<!-- -->
 
 No, we can’t tell the real data from the fake ones.
 

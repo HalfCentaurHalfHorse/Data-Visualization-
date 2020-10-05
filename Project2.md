@@ -49,7 +49,7 @@ WaterTaste %>%
   theme_grey(16)
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 3)  Create a vertical bar chart of `Class` counts.
 

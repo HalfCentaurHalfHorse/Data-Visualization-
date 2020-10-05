@@ -64,7 +64,7 @@ ggplot(WaterTaste, aes(Class))+
   theme_grey(16)
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 4)  Create a vertical grouped bar chart of `Class` and `UsuallyDrink` in
     which each level of `Class` forms one group containing three bars
@@ -84,7 +84,7 @@ WaterTaste %>%
   theme_grey(16)
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 5)  Create a horizontal stacked bar chart of proportions showing the
     type of water respondents usually drink by Class. The order of the
@@ -108,7 +108,7 @@ WaterTaste %>%
   ggtitle("proportions of UsuallyDrink in Classes")
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 6)  Create a horizontal stacked bar chart showing the proportional
     breakdown of `Class` for each level of `UsuallyDrink`, faceted on
@@ -133,7 +133,7 @@ ggplot(data = summary, aes(fill=UsuallyDrink, x=fct_rev(Class), y=prop)) +
   ggtitle("proportions of UsuallyDrink in Classes")
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
 ### 2\. Metacritic
 
@@ -229,7 +229,7 @@ ggplot(movie_data, aes(x=MetaScore, y=reorder(Title, MetaScore))) +
     ylab("Name of Movies") 
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
 
 5)  Create a Cleveland dot plot of metascore *and* critic score on the
     same graph, one color for each. Sort by metascore.
@@ -247,7 +247,7 @@ ggplot(tidyMovie,aes(score,fct_reorder2(Title, score_type=="MetaScore", score, .
   theme_dotplot 
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
 
 ### 3\. Nutrition
 
@@ -267,7 +267,7 @@ nutrition_plot +
   ggtitle("Relationship between calories and carbohydrates (alpha = 0.3)")
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
 2)  Points with alpha blending + density estimate contour lines
 
@@ -280,7 +280,7 @@ nutrition_plot +
   ggtitle("Relationship between Calories and Carbohydrates with Density Curves")
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
 
 3)  Hexagonal heatmap of bin counts
 
@@ -292,7 +292,7 @@ nutrition_plot +
   ggtitle("Hexagonal Heatmap of Calories and Carbohydrates")
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-15-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-15-1.png" style="display: block; margin: auto;" />
 
 4)  Square heatmap of bin counts
 
@@ -304,7 +304,7 @@ nutrition_plot +
   ggtitle("Square Heatmap of Calories and Carbohydrates")
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
 
 5)  Describe noteworthy features of the relationship between the
     variables based on your plots from parts (a)-(d), using the “Movie
@@ -366,7 +366,7 @@ ggplot()+
   ggtitle("Top 3 Food Among All Food")
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
 
 The top 3 kinds of food display very different distributions. In
 general, Baked Products have high calories and high carbohydrates, Beef
@@ -398,7 +398,7 @@ pairs(~ Ht + Wt + LBM + Bfat + BMI, data = ais,
       lower.panel = panel.smooth)
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
 
 The matrix above shows that `Ht`, `Wt` and `LBM` are strongly positively
 associated with each other since when the value of one variable
@@ -413,7 +413,7 @@ pairs(~ RCC + WCC + Hc + Hg + Ferr, data = ais,
       lower.panel = panel.smooth)
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
 
 The matrix above shows that `RCC`, `Hc` and `Hg` are strongly positively
 associated with each other since when the value of one variable
@@ -427,7 +427,7 @@ pairs(~ RCC + WCC + Ferr + BMI + Ht + Bfat + SSF, data = ais,
       lower.panel = panel.smooth)
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-20-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-20-1.png" style="display: block; margin: auto;" />
 
 Then, we select variables with small correlations from the the
 categories of `figure` and `blood`, namely `RCC`, `wcc`, `Ferr`, `BMI`,
@@ -451,7 +451,7 @@ ais %>% mutate(Sex = as.factor(Sex)) %>%
              diag = list(contains = wrap("densityDiag",alpha = 0.4)))
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-21-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-21-1.png" style="display: block; margin: auto;" />
 
 When coloring the points by gender, plenty of new patterns do occur:
 
@@ -481,7 +481,7 @@ ais %>% mutate(Sex = as.factor(Sex)) %>%
              diag = list(contains = wrap("densityDiag")))
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
 
 In the group of `blood`, the new matrix colored with gender also shows
 us new information. For variable `Ferr`, when analyzing the data from
@@ -523,7 +523,7 @@ ais %>% mutate(Sex = as.factor(Sex)) %>%
              diag = list(contains = wrap("densityDiag")))
 ```
 
-<img src="pset2_files/figure-gfm/unnamed-chunk-23-1.png" style="display: block; margin: auto;" />
+<img src="Projects/Project2_figs/unnamed-chunk-23-1.png" style="display: block; margin: auto;" />
 
 When analyzing the correlations among the three groups, the phenomenon
 mentioned above occurred again in the correlations between (`Ht`,`RCC`),

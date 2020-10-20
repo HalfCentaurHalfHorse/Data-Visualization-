@@ -42,7 +42,7 @@ ggparcoord(data=penguins_raw, columns=col_number,
   theme(plot.title = element_text(size = 20, face = "bold"))
 ```
 
-![](PSet3_Group35_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](Projects/Project3_figs/unnamed-chunk-3-1.png)<!-- -->
 
 By grouping using the `Species` variable, we see that three different
 species of penguins have unique characteristics. Adelie Penguins tend to
@@ -78,13 +78,8 @@ parcoords(data=pulitzer,
 
 <!--html_preserve-->
 
-<script type="application/json" data-for="htmlwidget-e2717b9e3e4cad745b44">{"x":{"data":{"names":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50"],"newspaper":["USA Today","Wall Street Journal","New York Times","Los Angeles Times","Washington Post","New York Daily News","New York Post","Chicago Tribune","San Jose Mercury News","Newsday","Houston Chronicle","Dallas Morning News","San Francisco Chronicle","Arizona Republic","Chicago Sun-Times","Boston Globe","Atlanta Journal Constitution","Newark Star Ledger","Detroit Free Press","Minneapolis Star Tribune","Philadelphia Inquirer","Cleveland Plain Dealer","San Diego Union-Tribune","Tampa Bay Times","Denver Post","Rocky Mountain News","Oregonian","Miami Herald","Orange County Register","Sacramento Bee","St. Louis Post-Dispatch","Baltimore Sun","Kansas City Star","Detroit News","Orlando Sentinel","South Florida Sun-Sentinel","New Orleans Times-Picayune","Columbus Dispatch","Indianapolis Star","San Antonio Express-News","Pittsburgh Post-Gazette","Milwaukee Journal Sentinel","Tampa Tribune","Fort Woth Star-Telegram","Boston Herald","Seattle Times","Charlotte Observer","Daily Oklahoman","Louisville Courier-Journal","Investor's Buisiness Daily"],"circ2004":[2192098,2101017,1119027,983727,760034,712671,642844,603315,558874,553117,549300,528379,499008,466926,453757,446241,409873,395000,379304,377058,376454,367528,355771,348502,340168,340007,339169,325032,310001,303841,281198,277947,275747,271465,269269,268297,262008,259127,253778,246057,242514,241605,238877,237318,236899,233497,231369,223403,216934,215735],"circ2013":[1674306,2378827,1865318,653868,474767,516165,500521,414930,583998,377744,360251,409265,218987,293640,470548,245572,231094,340778,209652,301345,306831,311605,250678,340260,416676,0,228909,147130,356165,200802,167199,177054,189283,115643,161070,163728,0,137148,156850,139005,180433,198469,191477,188593,95929,229764,137829,124667,131208,157161],"pctchg_circ":[-24,13,67,-34,-38,-28,-22,-31,4,-32,-34,-23,-56,-37,4,-45,-44,-14,-45,-20,-18,-15,-30,-2,22,-100,-33,-55,15,-34,-41,-36,-31,-57,-40,-39,-100,-47,-38,-44,-26,-18,-20,-21,-60,-2,-40,-44,-40,-27],"num_finals1990_2003":[1,30,55,44,52,4,0,23,4,12,2,11,7,5,1,25,1,2,7,4,24,4,0,10,1,4,9,17,3,4,4,11,2,4,5,0,5,1,1,0,3,2,0,1,0,11,1,0,0,0],"num_finals2004_2014":[1,20,62,41,48,2,0,15,2,6,3,6,2,2,1,16,5,6,5,4,8,7,2,11,8,1,8,7,2,4,3,2,0,0,2,1,3,0,0,0,0,8,0,0,0,5,3,0,3,1],"num_finals1990_2014":[2,50,117,85,100,6,0,38,6,18,5,17,9,7,2,41,6,8,12,8,32,11,2,21,9,5,17,24,5,8,7,13,2,4,7,1,8,1,1,0,3,10,0,1,0,16,4,0,3,1]},"options":{"rownames":false,"brushMode":"1D-axes","brushPredicate":"AND","reorderable":true,"margin":{"top":50,"bottom":50,"left":100,"right":50},"mode":"queue","bundlingStrength":0.5,"smoothness":0},"autoresize":false,"tasks":null},"evals":[],"jsHooks":[]}</script>
-<!--/html_preserve-->
-
 1.  Which newspapers appear to be multivariate outliers? Briefly
     describe their unusual patterns.
-
-Answer 2b:
 
 Wall Street today, Washington Post, New York Times, and Los Angeles
 Times appear to be multivariate outliers.
@@ -167,7 +162,7 @@ pairs(xtabs(n ~ ., factor_summary),
       main = "Mosaic Pairs Plot for DoctorVisits")
 ```
 
-![](PSet3_Group35_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](Projects/Project3_figs/unnamed-chunk-7-1.png)<!-- -->
 
 Answer 3b: `freerepat`, `gender` and `lchornic` appear to have strong
 association with numvisit. `freepoor` and `nchornic` appear to have
@@ -267,7 +262,7 @@ vcd::mosaic(numvisits ~ gender,
             main = 'numvisits ~ gender')
 ```
 
-![](PSet3_Group35_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](Projects/Project3_figs/unnamed-chunk-9-1.png)<!-- -->
 
 ``` r
 vcd::mosaic(numvisits ~ gender + lchronic, 
@@ -277,8 +272,7 @@ vcd::mosaic(numvisits ~ gender + lchronic,
             main = 'numvisits ~ gender + lchronic')
 ```
 
-![](PSet3_Group35_files/figure-markdown_github/unnamed-chunk-9-2.png)
-
+![](Projects/Project3_figs/unnamed-chunk-9-2.png)<!-- -->
 ``` r
 vcd::mosaic(numvisits ~ gender + lchronic + private,  
             direction = c("v","v","v", "h"),
@@ -287,7 +281,7 @@ vcd::mosaic(numvisits ~ gender + lchronic + private,
             main = 'numvisits ~ gender + lchronic + private')
 ```
 
-![](PSet3_Group35_files/figure-markdown_github/unnamed-chunk-9-3.png)
+![](Projects/Project3_figs/unnamed-chunk-9-3.png)<!-- -->
 
 Answer 3d: The 1st plot tells us that there are slightly more female
 than male in the dataset. We can see that `gender` and `numvisits` are
@@ -324,7 +318,7 @@ ggplot(visit_summary, aes(y=count,
   theme(plot.title = element_text(size = 20, face = "bold"))
 ```
 
-![](PSet3_Group35_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](Projects/Project3_figs/unnamed-chunk-10-1.png)<!-- -->
 
 Answer 3e: Alluvium plot allows us to intuitively capture how many
 patients are in each of these combinations.The number of male and female
@@ -389,4 +383,4 @@ plot(summary, type='bar') +
         axis.text.y = element_text(color = "grey20", size = 12))
 ```
 
-![](PSet3_Group35_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![](Projects/Project3_figs/unnamed-chunk-13-1.png)<!-- -->

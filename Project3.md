@@ -3,7 +3,7 @@
 We will use the `penguins_raw` dataset from the **palmerpenguins**
 package.
 
-1.  Draw a parallel coordinates plot of the numeric columns in the
+a.  Draw a parallel coordinates plot of the numeric columns in the
     dataset using `ggparcoord` from the **GGally** package. Choose
     parameters to help identify trends. What do you observe?
 
@@ -28,7 +28,7 @@ examination. We cannot observe any appearant relationships between
 `Flipper Length` and `Body Mass`, or between `Delta 15 N` and
 `Delta 13 C`.
 
-1.  Experiment with using color to separate factor levels of the factor
+b.  Experiment with using color to separate factor levels of the factor
     variables (one at a time, not in the same graph). Include the plot
     which shows the most distinct clusters. Briefly describe how the
     clusters differ from each other. (The factor variable should not be
@@ -61,7 +61,7 @@ concluded in part (a).
 
 ### 2. pulitzer
 
-1.  Draw an interactive parallel coordinates plot of the `pulitzer`
+a.  Draw an interactive parallel coordinates plot of the `pulitzer`
     dataset in the **fivethirtyeight** package with brushing using the
     `parcoords()` function in the **parcoords** package.
 
@@ -78,7 +78,7 @@ parcoords(data=pulitzer,
 
 <!--html_preserve-->
 
-1.  Which newspapers appear to be multivariate outliers? Briefly
+b.  Which newspapers appear to be multivariate outliers? Briefly
     describe their unusual patterns.
 
 Wall Street today, Washington Post, New York Times, and Los Angeles
@@ -91,7 +91,7 @@ in Number of Pulitzer Prize winners and finalists from 1990 to 2003,
 Number of Pulitzer Prize winners and finalists from 2004 to 2014, and
 Number of Pulitzer Prize winners and finalists from 1990 to 2014.
 
-1.  Choose one of the newspapers and research it online to gain a deeper
+c.  Choose one of the newspapers and research it online to gain a deeper
     understanding of its uniqueness. Provide a brief summary of your
     results. *Cite your sources by linking to the pages where you found
     the information.*
@@ -112,7 +112,7 @@ For this problem we will use the `DoctorVisits` data set in the **AER**
 package. (Note: for this package you need `data("DoctorVisits")` to load
 the data.)
 
-1.  We will consider `visits` to be the dependent variable. Create a new
+a.  We will consider `visits` to be the dependent variable. Create a new
     factor column, `numvisits`, based on `visits`, that contains three
     levels: “0”, “1”, and “2+”. (Tidyverse option:
     `forcats::fct_collapse()`). Why is this a reasonable choice?
@@ -150,7 +150,7 @@ cannot really provide insightful information. Grouping these data points
 into the same category gives us a decent amount of data points to
 perform further investigation.
 
-1.  Draw a mosaic pairs plot of all factor variables in `DoctorVisits`.
+b.  Draw a mosaic pairs plot of all factor variables in `DoctorVisits`.
     Based on the plot, which variables appear to have a *strong*
     association with `numvisits`? *medium* association? *weak or no*
     association? (Make your judgments relative to the other variables.)
@@ -164,12 +164,12 @@ pairs(xtabs(n ~ ., factor_summary),
 
 ![](Projects/Project3_figs/unnamed-chunk-7-1.png)<!-- -->
 
-Answer 3b: `freerepat`, `gender` and `lchornic` appear to have strong
+`freerepat`, `gender` and `lchornic` appear to have strong
 association with numvisit. `freepoor` and `nchornic` appear to have
 median association with numvisit. `Private` appear to have no
 association with numvisit.
 
-1.  Are p-values from *χ*<sup>2</sup> (chi-squared) tests of each of the
+c.  Are p-values from *χ*<sup>2</sup> (chi-squared) tests of each of the
     variables and `numvisits` consistent with your categorization in
     part (b)? Explain briefly.
 
@@ -234,14 +234,14 @@ chisq.test(DoctorVisits$numvisits, DoctorVisits$lchronic)
     ## data:  DoctorVisits$numvisits and DoctorVisits$lchronic
     ## X-squared = 109.26, df = 2, p-value < 2.2e-16
 
-Answer 3c: By performing Chi-square test on each pairs of variables, we
+By performing Chi-square test on each pairs of variables, we
 see that `gender`, `freerepat`, `nchronic` and `lchronic` have strong
 association with `numvisits`, `freepoor` have some association with
 numvisits, and we fail to reject the hypothesis that there is no
 relationship between `numvisits` and `private`. These tests gave similar
 conclusions to our raw prediction in 3(b).
 
-1.  Draw mosaic plots of `gender`, `lchronic`, `private` and `numvisits`
+d.  Draw mosaic plots of `gender`, `lchronic`, `private` and `numvisits`
     in stages:
 
 -   `gender` and `numvisits`
@@ -283,7 +283,7 @@ vcd::mosaic(numvisits ~ gender + lchronic + private,
 
 ![](Projects/Project3_figs/unnamed-chunk-9-3.png)<!-- -->
 
-Answer 3d: The 1st plot tells us that there are slightly more female
+The 1st plot tells us that there are slightly more female
 than male in the dataset. We can see that `gender` and `numvisits` are
 not independent. If you are a female, you are more likely to get higher
 number of visits. Looking at the 2nd plot, we can clearly see that only
@@ -300,7 +300,7 @@ decrease if `private` is true. Note that such observation is by no means
 conclusive, since there are not many data points left after all these
 filters.
 
-1.  Use `geom_alluvium()` from the **ggalluvial** package to display the
+e.  Use `geom_alluvium()` from the **ggalluvial** package to display the
     same variables as in the last graph of part (d). What new
     information / perspective does the alluvial plot provide, if any?
 
@@ -320,7 +320,7 @@ ggplot(visit_summary, aes(y=count,
 
 ![](Projects/Project3_figs/unnamed-chunk-10-1.png)<!-- -->
 
-Answer 3e: Alluvium plot allows us to intuitively capture how many
+Alluvium plot allows us to intuitively capture how many
 patients are in each of these combinations.The number of male and female
 who received no visits are similar to each other. On the other hand,
 female greatly outnumbered male when `numvisits` increases We cannot
@@ -331,7 +331,7 @@ to compare.
 
 ### 4. likert data
 
-1.  Find data online with at least three categorical variables whose
+a.  Find data online with at least three categorical variables whose
     levels form the same spectrum from one pole to its opposite. A
     common example is likert survey responses with categories such as
     “Strongly agree”, “Agree”, “Neutral”, “Disagree”, “Strongly
@@ -346,7 +346,7 @@ df <- as.data.frame(read_csv('police_service_likert.csv')) %>% select(2:10)
 
 Data Source:
 
-1.  If possible read your data directly from the site. If not (for
+b.  If possible read your data directly from the site. If not (for
     example if it is in pdf form), create a data frame in your code, or
     read it in from a data file that you’ve created. Include the file
     with your submission. Display a table of your data in summarized
@@ -370,7 +370,7 @@ summarized
     ## 8 attitude_and_.behavior_of_Police_Department_per~     3    15   104   146   143
     ## 9 The_level_of_safety_and_security_in_your_neighb~     3    27    57   198   126
 
-1.  Draw a diverging stacked bar chart of your data, following all best
+c.  Draw a diverging stacked bar chart of your data, following all best
     practices. You may use any package.
 
 ``` r

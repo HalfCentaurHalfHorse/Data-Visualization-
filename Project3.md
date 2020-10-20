@@ -15,7 +15,7 @@ ggparcoord(dplyr::select_if(penguins_raw, is.numeric),
   theme(plot.title = element_text(size = 20, face = "bold"))
 ```
 
-![](PSet3_Group35_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](Projects/Project3_figs/unnamed-chunk-2-1.png)<!-- -->
 
 Answer 1a: There are no direct relationships to be observed, but there
 seems to be clusters in the dataset. For instance, from `Culmen Length`
